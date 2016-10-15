@@ -10,7 +10,7 @@
 <body>
 	<div id="navbar">
 		<a href="help.html"><img class= "right"src="_.png" alt="questions" /></a>
-		
+
 
 		<div id="floating-panel">
 			<input id="address" type="textbox" value="Somerville, MA, USA">
@@ -85,7 +85,7 @@
 		};
 
 		function go() {
-			d3.json('http://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/restaurants?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
+			d3.json('https://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/restaurants?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
 				root.children[0].children = data.data.slice(0, 10);
 				if (root.children[1].children && root.children[2].children) {
 					//root.children.forEach(aylmao);
@@ -94,7 +94,7 @@
 				}
 			});
 
-			d3.json('http://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/hotels?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
+			d3.json('https://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/hotels?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
 				root.children[1].children = data.data.slice(0, 10);
 				if (root.children[0].children && root.children[2].children) {
 					//root.children.forEach(aylmao);
@@ -103,7 +103,7 @@
 				}
 			});
 
-			d3.json('http://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/attractions?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
+			d3.json('https://api.tripadvisor.com/api/partner/2.0/map/' + lat + ',' + lng + '/attractions?key=89DE2CFC0C1C43978B484B55F9A514EC', function(data) {
 				root.children[2].children = data.data.slice(0, 10);
 				if (root.children[1].children && root.children[0].children) {
 					//root.children.forEach(aylmao);
