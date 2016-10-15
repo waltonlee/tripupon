@@ -19,20 +19,24 @@ body {
         z-index: 5;
         background-color: #000;
         padding: 4px;
-        border: 1px solid #999;
+        border: 1px solid #ff14ab;
         text-align: center;
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
         padding-left: 10px;
-        margin-top: 18px;
+        margin-top: 19px;
        margin-left: 150px;
 
 
 
       }
 #submit {
-  background-color: #999;
+  background-color: #000;
+  border-style: solid;
+  border-color:#ff14ab;
+  border-width: 1px;
   height:23px;
+  color: #ff14ab;
 
 }
 
