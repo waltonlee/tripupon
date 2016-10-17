@@ -24,6 +24,7 @@
 	<script>
 		var width = $(window).width(),
 			height = $(window).height(),
+			address,
 			lat,
 			lng,
 			root;
@@ -35,7 +36,7 @@
 		});
 
 		function geocodeAddress(geocoder) {
-			var address = document.getElementById('address').value;
+			address = document.getElementById('address').value;
 			geocoder.geocode({
 				'address': address
 			}, function(results, status) {
@@ -175,6 +176,7 @@
 					}
 				})
 				.text(function(d) {
+					if (d.name == "root") return address;
 					return d.name;
 				});
 
